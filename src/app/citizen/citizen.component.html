@@ -1,0 +1,72 @@
+<div id="cwrap">
+	<div>
+		<input id="photo" type="image" src='./../assets/icon.png'>
+		<!-- value={{citizen?.profilePhoto?.fileData}} -->
+	</div>
+	<div *ngIf="!authorized && main">
+		<div>
+			<button *ngIf='!checkSub' id='sub' (click)="subscribeCitizen(true)">ПІДПИСАТИСЯ</button>
+			<button *ngIf='checkSub' id='unsub' (click)="subscribeCitizen(false)">ВІДПИСАТИСЯ</button>
+		</div>
+	</div>
+	<div *ngIf="!authorized && main">
+		<div *ngIf="!isMsg">
+			<button id='mess' (click)="showMessage()">ПОВІДОМЛЕННЯ</button>
+		</div>
+		<div>
+			<span *ngIf="isMsg"><textarea rows="2" cols="30"
+					[(ngModel)]="message" (keydown.enter)="sendMessage();false"></textarea></span>
+		</div>
+	</div>
+	<br>
+	<div>
+		<p id='name'>{{citizen?.citizenName?.firstName + " " +
+			citizen?.citizenName?.secondName}}</p>
+		Громада:
+		<button id='com' (click)="toCommunity()">{{citizen?.community?.communityName}}</button>
+		<p>
+			E-mail:<span id='mail'> {{citizen?.email}}</span>
+		</p>
+		<p>Phone: {{citizen?.phone}}</p>
+	</div>
+
+	<div id='main' *ngIf="main">
+		<div>
+			<button class='option' (click)="dialogConvert()">{{"МОЇ
+				ПОВІДОМЛЕННЯ" + (unredCount>0 ? " (" + unredCount + ")" : "")}}</button>
+			<div *ngIf="dialogShow" id='dial'>
+				<gruk-dialog *ngFor="let item of dialogs" [chat]="item"
+					[receiver]="receiver(item)" [citizen]="this"></gruk-dialog>
+			</div>
+		</div>
+
+		<div>
+			<button class='option' (click)="mysubConvert()">МОЇ ПІДПИСКИ</button>
+			<div *ngIf="mysubShow">
+				<button class='btn' *ngFor="let item of subscribed"
+					(click)="toCitizen(item.id)">{{item.citizenName.firstName
+					+ " " + item.citizenName.secondName}}</button>
+			</div>
+		</div>
+
+		<div>
+			<button class='option' (click)="subConvert()">МОЇ ПІДПИСНИКИ</button>
+			<div *ngIf="subShow">
+				<button class='btn' *ngFor="let item of subscribers"
+					(click)="toCitizen(item.id)">{{item.citizenName.firstName
+					+ " " + item.citizenName.secondName}}</button>
+			</div>
+		</div>
+
+		<div>
+			<button class='option' (click)="friendConvert()">ЗНАЙТИ
+				ДРУЗІВ</button>
+			<div *ngIf="friendShow">
+				<button class='btn' *ngFor="let item of friends"
+					(click)="toCitizen(item.id)">{{item.citizenName.firstName
+					+ " " + item.citizenName.secondName}}</button>
+			</div>
+		</div>
+	</div>
+</div>
+

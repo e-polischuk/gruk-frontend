@@ -1,0 +1,85 @@
+#log_wrap {
+	position: absolute;
+/*	position: fixed;*/
+    right: 20px;
+    top: 15px;
+    z-index: 110;
+}
+
+input[name=email], input[name=pwd]  {
+	width: 160px;
+	height: 16px;
+	background: white;
+	border: solid yellow 1px;
+/* 	text-shadow: 1px 3px 2px rgba(0,0,0,0.3); */
+	border-radius: 5px; 
+	color: LightSlateGray;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-weight: normal;
+	text-align: center;
+	border: 1px solid #ccc;
+	overflow: hidden;
+    outline: none;
+}
+
+input::placeholder {
+	color: Gainsboro;
+}
+
+#in {
+ 	color: white; /* #FEFE60 dodgerblue */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+ 	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+/* 	background-color: white 100%; */
+/* 	border: solid dodgerblue 1px; */
+	border-radius: 5px 5px 5px 5px;	
+	background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+/*#hi {
+	position: absolute;
+	position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 110;
+    
+    font-style: italic;
+}*/
+
+button {
+ 	color: white; /* #FEFE60 dodgerblue */
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+ 	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+/* 	background-color: white 100%; */
+/* 	border: solid dodgerblue 1px; */
+	border-radius: 5px 5px 5px 5px;	
+	background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#name {
+ 	font-size: 13px;
+}
+
+input.ng-touched.ng-invalid {
+	border: solid red 1px;
+}
+
+input.ng-touched.ng-valid {
+ 	border: solid green 1px;
+}

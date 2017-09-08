@@ -1,0 +1,21 @@
+<div id='log_wrap'>
+	<div *ngIf="!app.authorized">
+		<form id='login' #formIn="ngForm" novalidate (ngSubmit)="login()">
+		<span class="form-group">
+			<input type="email" class="form-control" name="email" placeholder="E-mail" [(ngModel)]="email"
+				required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"/>
+		</span> &nbsp;
+		<span class="form-group">
+			<input type="password" class="form-control" name="pwd" placeholder="Password" [(ngModel)]="password"
+				required pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"/>
+		</span> 
+		<span class="form-group">
+			<input id="in" type="submit" [disabled]="formIn.invalid" class="btn btn-default" value="УВІЙТИ"/>
+		</span>
+	</form>	
+	</div>
+	<div id='hi' *ngIf="app.authorized">
+		<button id='name' (click)="toCitizen()">{{app?.citizen?.citizenName?.firstName + " " + app?.citizen?.citizenName?.secondName}}</button> &nbsp;&nbsp;
+		<button id="out" (click)="logout()">ВИЙТИ</button>
+	</div>	
+</div>

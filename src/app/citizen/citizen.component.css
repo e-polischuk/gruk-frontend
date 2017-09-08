@@ -1,0 +1,123 @@
+#cwrap {
+	position: absolute;
+    left: 0px;
+    top: 50px;
+    padding: 5px;
+    margin: auto;
+    width: 100%;
+}
+
+#photo {
+	margin: auto;
+	width: 128px;
+	height: 128px;
+	border-radius: 5px;
+/*	padding: 5px;*/
+	text-align: center;
+	border: 1px solid blue;
+	background: white;
+}
+
+#unsub {
+	color: #57d2fb;
+	font-weight: bold;
+	background: white;
+	border: 1px solid #57d2fb;
+	width: 128px;
+	margin: 2px;
+	padding: 2px;
+	border-radius: 5px;
+}
+
+#sub, #mess {
+	width: 128px;
+	margin: 2px;
+	padding: 2px;
+	border-radius: 5px;
+	align: center;
+	background: #ffff80;
+	color: blue;
+	font-size: 12px;
+	border: 1px solid blue;
+}
+
+#com {
+	cursor: pointer;
+	color: blue;
+	background: white;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-weight: bold;
+/*	height: 32px;
+	text-align: center;
+    border-radius: 10px;
+	font-size: 16px;
+	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);*/
+ 	border: 0px solid SlateGray; /*  */
+    overflow: hidden;
+    outline: none;
+}
+
+#name {
+	color: red;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-weight: bold;
+	font-size: 16px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+#mail {
+	color: blue;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-style: italic;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+#main {
+	position: absolute;
+    right: 15px;
+    top: 5px;
+	width: 20%;
+	margin: auto;
+ 	border: 1px solid #ccc;
+ 	border-radius: 5px;
+ 	padding: 1%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#dial {
+	width: 98%;
+	margin: auto;;
+}
+
+.option {
+	width: 100%;
+	align: center;
+	padding: 2px;
+	margin: 2px;
+	border-radius: 5px;
+	background: #ffff80;
+	color: blue;
+	font-size: 12px;
+	border: 1px solid blue;
+}
+
+.btn {
+	margin: auto;
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+	color: red;
+	background: LightCyan;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+/*	height: 32px;
+	font-weight: bold;
+	text-align: center;
+    border-radius: 10px;
+	font-size: 16px;
+	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);*/
+ 	border: 0px solid SlateGray; /*  */
+    overflow: hidden;
+    outline: none;
+}

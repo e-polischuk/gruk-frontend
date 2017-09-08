@@ -1,0 +1,12 @@
+<div id='mes'>
+	<div>
+		<button id='from' (click)="toSender()" >{{message.sender.citizenName.firstName + " " + message.sender.citizenName.secondName}}</button>
+		<button id='time'>{{message.dateTime.year + "-" + message.dateTime.monthValue + "-" + message.dateTime.dayOfMonth + "  "
+		 + message.dateTime.hour + "h:" + message.dateTime.minute + "m:" + message.dateTime.second + "s"}}</button>
+		<button id='del' (click)="deleteMsg()" >x</button>
+	</div>
+	<div>
+		<div id='textCont'>{{message.textContent}}</div> &nbsp;
+		<span id='fileCont'>{{message.embeddedFile}}</span>
+	</div>
+</div>

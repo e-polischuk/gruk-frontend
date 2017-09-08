@@ -1,0 +1,12 @@
+<div *ngIf="this.chat.dialog.length!==0" id='dia'>
+	<button id='chat' (click)="convert()">{{receiver.citizenName.firstName + " " + receiver.citizenName.secondName + (chat.unredCount>0 ? " ("+ chat.unredCount +")" : "")}}</button>
+	
+	<div *ngIf="chat.visible">
+		<div>
+			<gruk-message *ngFor="let item of chat.dialog" [message]="item" [dialogComponent]="this"></gruk-message>
+		</div>	
+		<div>
+			<textarea rows="2" cols="30" [(ngModel)]="textContent" (keydown.enter)="send();false"></textarea>
+		</div>
+	</div>		
+</div>

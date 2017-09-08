@@ -1,0 +1,33 @@
+<div *ngIf="!app.authorized && home">
+<div id='registr'>
+	<div id='lb'><label>Зареєструватися:</label></div><br>
+	<form id='reg-form' #myForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+		<div class="form-group">
+	        <input type="search" list="communities" class="form-control" name="community" [(ngModel)]="communityStr" required
+					placeholder="Назва адм.-терит. одиниці" [formControl]="communityControl"> 
+			<datalist id="communities">
+				<option *ngFor="let item of communities">{{item?.communityName + ", " + item?.rayon + ", " + item?.oblast + " (" + item?.id + ")"}}</option>
+		   	</datalist>
+	    </div><br>
+	    <div class="form-group">
+	        <input class="form-control" name="firstName" placeholder="Ваше ім'я" [(ngModel)]="citizen.citizenName.firstName"
+	        		required pattern="^[а-яєіїА-ЯЄІЇa-zA-Z ]*$">
+	    </div><br>
+	    <div class="form-group">
+	        <input class="form-control" name="secondName" placeholder="Ваше прізвище" [(ngModel)]="citizen.citizenName.secondName"
+	        		required pattern="^[а-яєіїА-ЯЄІЇa-zA-Z ]*$">
+	    </div><br>
+	    <div class="form-group">
+	        <input type="email" class="form-control" name="email" placeholder="Ваш e-mail" [(ngModel)]="citizen.email"
+					required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"/>
+	    </div><br>
+	    <div class="form-group">
+	        <input type="password" class="form-control" name="pwd" placeholder="Ваш пароль" [(ngModel)]="password"
+					required pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"/>
+	    </div><br><br>
+	    <div class="form-group">
+	        <input type="submit" [disabled]="myForm.invalid" class="btn btn-default" value="РЕЄСТРАЦІЯ" />
+	    </div>
+	</form>
+</div>
+</div>

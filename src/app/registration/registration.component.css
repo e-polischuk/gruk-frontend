@@ -1,0 +1,84 @@
+#registr {
+	position: absolute;
+	position: fixed;
+    right: 1%;
+    top: 70px;
+	width: 16%;
+	margin: auto;
+ 	border: 1px solid #ccc;
+ 	border-radius: 10px;
+ 	padding: 20px 1% 1% 1%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#lb {
+	width: 100%;
+	height: 30px;
+	margin: auto;
+	font-size: 22px;
+	font-weight: bold;
+    text-align: center;
+    color: #696969;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+}
+
+/* form { */
+/* 	display:inline-block; */
+/* 	margin: 0 auto; */
+/* } */
+
+input {
+	width: 100%;
+	height: 22px;
+	margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+/*     cursor: pointer; */
+    font-size: 14px;
+    text-align: center;
+/*      */       
+    color: LightSlateGray;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+ 	font-weight: normal;
+	text-align: center;
+	overflow: hidden;
+    outline: none;
+}
+
+input::placeholder {
+	color: Gainsboro;
+}
+
+input[type=submit] {
+/* 	 */
+/* 	height: 30px; */
+/* 	margin: auto; */
+/*     border: 1px solid #ccc; */
+/*     text-align: center; */
+/*     font-family: Verdana, Arial, Helvetica, sans-serif; */
+/*     text-align: center; */
+ 
+ 	width: 100%;
+ 	height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+	font-size: 20px; 
+    color: white;	
+ 	font-weight: bold;
+ 	text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
+ 	
+	background: deepskyblue; /* For browsers that do not support gradients    dodgerblue*/
+	background: -webkit-linear-gradient(deepskyblue, deepskyblue, deepskyblue, yellow, yellow, yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(deepskyblue, deepskyblue, deepskyblue, yellow, yellow, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(deepskyblue, deepskyblue, deepskyblue, yellow, yellow, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(deepskyblue, deepskyblue, deepskyblue, yellow, yellow, yellow); /* Standard syntax */
+}
+
+input.ng-touched.ng-invalid {
+	border: solid red 1px;
+}
+
+input.ng-touched.ng-valid {
+ 	border: solid green 1px;
+}

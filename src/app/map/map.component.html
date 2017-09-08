@@ -1,0 +1,32 @@
+<div id='map'>
+	<br>
+	<br>
+	<button id='btn' (click)="toggle()">ОЗНАЙОМИТИСЬ З АДМІНІСТРАТИВНО-ТЕРИТОРІАЛЬНИМ УСТРОЄМ УКРАЇНИ</button>
+	<br>
+	<div [ngClass]="{invisible: visibility}">
+		<iframe id="frame"
+			src="https://uk.wikipedia.org/wiki/Вікіпедія:Проект:Населені_пункти_України/Сільради">
+			<a href="https://uk.wikipedia.org/wiki/Вікіпедія:Проект:Населені_пункти_України/Сільради">АДМІНІСТРАТИВНО-ТЕРИТОРІАЛЬНИЙ УСТРІЙ УКРАЇНИ</a>
+		</iframe>
+	</div>
+	<br>
+	<br>
+	<!-- this creates a google map on the page with the given lat/lng from -->
+	<!-- the component as the initial center of the map: -->
+	<div class="container">
+		<div class="form-group">
+			<input id="geocode" placeholder="знайти на мапі за назвою" autocorrect="off"
+				autocapitalize="off" spellcheck="off" type="text"
+				class="form-control" #search [formControl]="searchControl">
+		</div>
+		<agm-map id="gmap" [latitude]="lat"
+							[longitude]="lng"
+							[zoom]="zoom"
+							[disableDefaultUI]="true"
+							[zoomControl]="false"
+							[draggable]="false"
+							[minZoom]="6">
+			<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+		</agm-map>
+	</div>
+</div>
