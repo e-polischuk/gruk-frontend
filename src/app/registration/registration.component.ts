@@ -37,7 +37,7 @@ export class RegistrationComponent implements OnInit {
     ngOnInit() {
         this.router.events.subscribe(event => {
             if (event instanceof NavigationEnd ) {
-                this.home = ('/home' === event.url);
+                this.home = ('/home' === event.url || '/' === event.url);
             }
         });
         this.newCitizen();
