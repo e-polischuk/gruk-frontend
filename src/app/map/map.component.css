@@ -28,7 +28,7 @@
 	height: 350px;
 	margin: auto;
 	aling: center;
-	border-radius: 50px;
+/*	border-radius: 50px;*/
 	border: none;
 	overflow: hidden;
     outline: none;
@@ -52,8 +52,8 @@ input::placeholder {
 	color: Gainsboro;
 }
 
-.sebm-google-map-container {
-	width: 100%;  /* 850px */
+#gmap {
+	width: 100%;  /* 850px .sebm-google-map-container*/
   	height: 580px;
   	border-radius: 50px;
 }

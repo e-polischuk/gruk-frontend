@@ -1,0 +1,15 @@
+#close {
+	position: absolute;
+    left: 48%;
+    top: 8px;
+    margin: auto;
+    color: red;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 10px;
+	background: white;
+	border: 1px solid red;
+	cursor: pointer;
+}

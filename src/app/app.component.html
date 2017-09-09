@@ -1,4 +1,5 @@
 <div id='gruk'>
+	<button id='close' *ngIf='!closed' (click)="shutdown()">STOP</button>
 	<gruk-header></gruk-header>
 	<gruk-login [app]="this"></gruk-login>
 	<gruk-registration [app]="this"></gruk-registration>

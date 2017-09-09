@@ -232,7 +232,6 @@ export class CitizenComponent implements OnInit, OnDestroy {
         } else if (operation === "update") {
             this.subscriptionService.updateSubscript(subscript).subscribe(resp => {
                 console.log("UPDATED SUBSCRIPT: " + JSON.stringify(resp.json(), null, 4));
-                
             });
         } else if (operation === "delete") {
             this.subscriptionService.deleteSubscript(subscript).subscribe(resp => {
